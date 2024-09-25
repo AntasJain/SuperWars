@@ -1,0 +1,28 @@
+.custom-button {
+  background-color: #4285f4; /* Bright blue */
+  border: none; /* Remove border */
+}
+
+.custom-button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.custom-card {
+  background-color: #f8f9fa; /* Light gray background */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.custom-card-title {
+  color: #333333; /* Dark gray for the title */
+}
+
+.custom-card-label {
+  color: #555555; /* Slightly lighter gray for the label */
+}
+
+.custom-card-placeholder {
+  font-style: italic;
+  color: #6c757d; /* Light gray for the placeholder */
+}

@@ -1,0 +1,15 @@
+.transparent-navbar {
+  background-color: transparent !important;
+  box-shadow: none;
+  margin: 20px 0;
+  padding-left: 15px;
+}
+
+.transparent-navbar .navbar-brand,
+.transparent-navbar .nav-link {
+  color: white;
+}
+
+.transparent-navbar .nav-link:hover {
+  color: #f8f9fa;
+}
