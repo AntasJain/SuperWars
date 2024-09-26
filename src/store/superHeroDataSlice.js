@@ -5,7 +5,8 @@ export const fetchSuperHeroData = createAsyncThunk(
   "heros/allData",
   async () => {
     const response = await fetch(url);
-    return response.json();
+    const data = await response.json();
+    return data;
   }
 );
 const initialState = {

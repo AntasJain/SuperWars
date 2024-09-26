@@ -8,20 +8,15 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import Collection from "./pages/Collection";
 import Navigation from "./components/Navigation";
+import BottomAlert from "./components/BottomAlert";
 
 function App() {
   const dispatch = useDispatch();
   const { loading, error } = useSelector((state) => state.heroSlice);
 
-  let display;
-
   useEffect(() => {
     dispatch(fetchSuperHeroData());
   }, [dispatch]);
-
-  if (loading) display = <p> Retrieving your Cards for the game...</p>;
-  if (error)
-    display = <p>Problem Retrieving your Cards... Check Console for more</p>;
 
   return (
     <Router>
@@ -29,10 +24,14 @@ function App() {
         <Navigation />
         <Container className="mt-3">
           <Routes>
-            <Route path="/" element={<TradeScreen display={display} />} />
+            <Route
+              path="/"
+              element={<TradeScreen loading={loading} error={error} />}
+            />
             <Route path="/collection" element={<Collection />} />
           </Routes>
         </Container>
+        <BottomAlert loading={loading} error={error} />
       </div>
     </Router>
   );

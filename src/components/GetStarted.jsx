@@ -1,6 +1,6 @@
 import { Button, Card, Form } from "react-bootstrap";
 import "./GetStarted.css";
-import { useRef, useState } from "react";
+import { useRef } from "react";
 import { useDispatch } from "react-redux";
 import { setPlayerName } from "../store/playerDataSlice";
 
