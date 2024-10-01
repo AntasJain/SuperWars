@@ -27,3 +27,23 @@
 .button:hover {
   background-color: purple !important;
 }
+
+.result-image {
+  position: fixed; /* Make sure the image is fixed to the viewport */
+  bottom: -100px; /* Start the image off-screen */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust for centering */
+  width: 200px; /* Adjust size as needed */
+  animation: moveUp 2s ease forwards; /* Apply the 'move up' animation */
+}
+
+@keyframes moveUp {
+  from {
+    bottom: -100px; /* Start off-screen */
+    opacity: 0; /* Start invisible */
+  }
+  to {
+    bottom: 50%; /* Move to the middle of the screen */
+    opacity: 1; /* Fade in */
+  }
+}

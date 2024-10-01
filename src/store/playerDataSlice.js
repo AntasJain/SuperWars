@@ -7,8 +7,8 @@ const playerDataSlice = createSlice({
     setPlayerName: (state, action) => {
       state.name = action.payload;
     },
-    updateScore: (state) => {
-      state.score++;
+    updateScore: (state, action) => {
+      state.score = action.payload;
     },
   },
 });

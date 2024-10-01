@@ -9,11 +9,12 @@ const CharacterCard = ({
   imageUrl,
   publisher,
   powerstats,
-  hoverable = true,
-  isFlipped = false,
+  flipItNow = false,
+  compCardClickable = true,
 }) => {
   const [isDummy, setIsDummy] = useState(false);
-  const [isFlippedState, setIsFlippedState] = useState(isFlipped);
+  const [isFlippedState, setIsFlippedState] = useState(false); // Default is not flipped
+
   useEffect(() => {
     setIsDummy(name.startsWith("Dummy"));
   }, [name]);
@@ -24,9 +25,15 @@ const CharacterCard = ({
     }
   };
 
+  useEffect(() => {
+    setIsFlippedState(flipItNow);
+  }, [flipItNow]);
+
   return (
     <Card
-      className={`purple-card ${isDummy ? "non-hoverable" : ""}`}
+      className={`purple-card ${isDummy ? "non-hoverable" : ""} ${
+        !compCardClickable ? "non-clickable" : ""
+      }`}
       onClick={handleCardClick}
     >
       <div className={`card-inner ${isFlippedState ? "flipped" : ""}`}>
