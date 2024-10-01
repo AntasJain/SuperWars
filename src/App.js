@@ -12,7 +12,9 @@ import BottomAlert from "./components/BottomAlert";
 
 function App() {
   const dispatch = useDispatch();
-  const { loading, error } = useSelector((state) => state.heroSlice);
+  const { loading, error, characters } = useSelector(
+    (state) => state.heroSlice
+  );
 
   useEffect(() => {
     dispatch(fetchSuperHeroData());
@@ -22,15 +24,23 @@ function App() {
     <Router>
       <div className="App">
         <Navigation />
-        <Container className="mt-3">
-          <Routes>
-            <Route
-              path="/"
-              element={<TradeScreen loading={loading} error={error} />}
-            />
-            <Route path="/collection" element={<Collection />} />
-          </Routes>
-        </Container>
+
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <Container className="mt-3">
+                <TradeScreen
+                  loading={loading}
+                  error={error}
+                  characters={characters}
+                />
+              </Container>
+            }
+          />
+          <Route path="/collection" element={<Collection />} />
+        </Routes>
+
         <BottomAlert loading={loading} error={error} />
       </div>
     </Router>

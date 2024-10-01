@@ -13,3 +13,13 @@
 .bottom-alert.slide-down {
   transform: translateY(100%); /* Move down out of view */
 }
+/* const qtyPlaceholders = (4 - (filteredCharacters.length % 4)) % 4;
+for (let i = 1; i <= qtyPlaceholders; i++) {
+  filteredCharacters.push({
+    name: "XXX",
+    id: 1000 + i,
+    imageUrl: "",
+    publisher: "",
+    powerstats: {},
+  });
+} */

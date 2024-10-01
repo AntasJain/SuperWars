@@ -2,6 +2,7 @@
   background-image: url("/src/assets/backdrop.jpg"); /* Ensure this is correct */
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   background-repeat: no-repeat;
   min-height: 100vh; /* Changed from height to min-height */
   display: flex;

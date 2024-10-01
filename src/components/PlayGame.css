@@ -1,0 +1,29 @@
+.button {
+  width: 200px !important;
+  height: 40px !important;
+  margin-top: 10px !important;
+  background-color: black !important;
+  border: 2px solid purple !important;
+}
+.container-card {
+  width: 60rem !important;
+  height: 40rem !important;
+  padding: 20px !important;
+  background-color: rgba(0, 0, 0, 0.7) !important;
+  color: white !important;
+}
+.mid-container {
+  display: flex !important;
+  margin: 5px 5px 5px 5px !important;
+  flex-direction: row !important;
+  justify-content: space-between !important;
+}
+.buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.button:hover {
+  background-color: purple !important;
+}

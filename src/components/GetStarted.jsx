@@ -1,16 +1,22 @@
-import { Button, Card, Form } from "react-bootstrap";
+import { Button, Card, CardFooter, Form } from "react-bootstrap";
 import "./GetStarted.css";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { useDispatch } from "react-redux";
 import { setPlayerName } from "../store/playerDataSlice";
 
-const GetStarted = () => {
+const GetStarted = ({ onPlayerReady }) => {
   const playerRef = useRef(null);
   const dispatch = useDispatch();
+  const [inputError, setInputError] = useState("");
   const handleSubmit = (e) => {
     e.preventDefault();
-    const playerName = playerRef.current.value;
-    dispatch(setPlayerName(playerName));
+    if (playerRef.current.value !== "") {
+      const playerName = playerRef.current.value;
+      dispatch(setPlayerName(playerName));
+      onPlayerReady();
+    } else {
+      setInputError("You must Enter player name to continue.");
+    }
   };
 
   return (
@@ -38,6 +44,9 @@ const GetStarted = () => {
           </Button>
         </Form>
       </Card.Body>
+      <CardFooter hidden={inputError === ""} className="custom-card-footer">
+        {inputError}
+      </CardFooter>
     </Card>
   );
 };

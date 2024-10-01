@@ -1,0 +1,22 @@
+.transparent-table {
+  background-color: transparent !important; /* Make the table background transparent */
+}
+
+.transparent-row {
+  background-color: transparent !important; /* Make the row background transparent */
+}
+
+.transparent-cell {
+  background-color: transparent !important; /* Make the cell background transparent */
+  border: none; /* Optional: Remove borders */
+  color: white; /* Set the text color to white */
+}
+
+/* Optional: If Bootstrap's table styles are overriding the background */
+.table {
+  background-color: transparent !important;
+}
+
+.table td {
+  color: white !important; /* Ensure that text color stays white */
+}

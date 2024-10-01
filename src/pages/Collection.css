@@ -1,0 +1,50 @@
+.button-overlay {
+  position: relative;
+  margin: 20px;
+  top: 0; /* Position buttons at the top */
+  left: 0;
+  right: 0;
+  z-index: 10;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+  background-color: transparent; /* Change to your desired background color */
+  border-radius: 15px; /* Adjust this value for more or less curvature */
+  padding: 10px; /* Add padding to give space around the buttons */
+  padding: 15px; /* Adjust padding as needed */
+}
+
+.mt-5 {
+  margin-top: 100px; /* Create space between buttons and cards */
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping */
+  justify-content: center; /* Center the items */
+}
+
+.col {
+  display: flex;
+  justify-content: center; /* Center the cards */
+  align-items: flex-start; /* Align items at the start */
+}
+
+/* Optional: Set max-width for better alignment */
+.col {
+  max-width: 200px; /* Set a max width to control the card size */
+}
+.placeholder-card {
+  opacity: 0; /* Make the card invisible */
+  pointer-events: none; /* Disable interactions */
+  background-color: transparent; /* Optional: ensure it has no background */
+}
+.button-overlay {
+  margin-bottom: 20px; /* Space below the alphabet buttons */
+}
+
+.container {
+  margin-bottom: 20px; /* Space below the card container */
+}
+
+.credits-section {
+  margin-top: 20px; /* Space above the credits section */
+}

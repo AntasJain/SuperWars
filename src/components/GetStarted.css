@@ -26,3 +26,9 @@
   font-style: italic;
   color: #6c757d; /* Light gray for the placeholder */
 }
+
+.custom-card-footer {
+  color: red !important;
+  background-color: white !important;
+  border: none !important;
+}
