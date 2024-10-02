@@ -3,7 +3,7 @@ import { Navbar, Nav } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "./Navigation.css";
 
-function Navigation() {
+function Navigation({ onHomeReset }) {
   return (
     <Navbar className="transparent-navbar ml-3" expand="lg">
       <Navbar.Brand as={Link} to="/">
@@ -12,7 +12,7 @@ function Navigation() {
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="ml-auto">
-          <Nav.Link as={Link} to="/">
+          <Nav.Link as={Link} to="/" onClick={onHomeReset}>
             Home
           </Nav.Link>
           <Nav.Link as={Link} to="/collection">

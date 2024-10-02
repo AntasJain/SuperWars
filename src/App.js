@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import "./App.css";
 import TradeScreen from "./pages/TradeScreen";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { fetchSuperHeroData } from "./store/superHeroDataSlice";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
@@ -20,10 +20,14 @@ function App() {
     dispatch(fetchSuperHeroData());
   }, [dispatch]);
 
+  const [resetHome, setResetHome] = useState(false);
+  const handleResetHome = () => {
+    setResetHome((prev) => !prev);
+  };
   return (
     <Router>
       <div className="App">
-        <Navigation />
+        <Navigation onHomeReset={handleResetHome} />
 
         <Routes>
           <Route
@@ -34,6 +38,7 @@ function App() {
                   loading={loading}
                   error={error}
                   characters={characters}
+                  reset={resetHome}
                 />
               </Container>
             }

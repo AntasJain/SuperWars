@@ -74,7 +74,7 @@ const PlayGame = ({ characters, onGameOver }) => {
           dispatch(updateScore(score.player));
           onGameOver();
         }
-      }, 2000);
+      }, 500);
     }
   };
 

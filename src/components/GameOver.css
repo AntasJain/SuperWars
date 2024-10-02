@@ -1,0 +1,19 @@
+.custom-card {
+  background-color: #f8f9fa; /* Light gray background */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 400px;
+}
+.button-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.button {
+  margin: 5px;
+  background-color: #4285f4 !important;
+  border: none !important;
+}
