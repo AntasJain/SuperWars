@@ -1,70 +1,85 @@
-# Getting Started with Create React App
+# SuperWars
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Welcome to SuperWars! This is an interactive card game where players can pit their favorite superheroes against each other based on their power stats. Built using React and Redux, SuperWars allows players to enter their names, shuffle superhero cards, and engage in a fun, competitive game.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- Features
+- Technologies Used
+- Installation
+- Usage
+- Game Logic
+- Components
+- Contributing
+- License
+- Acknowledgments
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Enter your player name and start the game.
+- View superhero cards with their images and power stats.
+- Play against a computer opponent.
+- Score tracking for wins, losses, and draws.
+- Responsive design with Bootstrap for a smooth user experience.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Technologies Used
 
-### `npm test`
+- React: A JavaScript library for building user interfaces.
+- Redux: A state management tool for React applications.
+- React Bootstrap: Bootstrap components built with React.
+- CSS: For styling and layout.
+- JavaScript ES6+: For modern JavaScript functionality.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Installation
 
-### `npm run build`
+To get started with the SuperWars project, follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+1. Clone the repository:
+   git clone https://github.com/AntasJain/superwars.git
+   cd superwars
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Install the dependencies:
+   npm install
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+3. Start the application:
+   npm start
 
-### `npm run eject`
+4. Open your web browser and navigate to http://localhost:3000 to see the app in action!
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Usage
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Enter your desired player name on the home screen and click "Play Game".
+2. Choose a stat from your superhero card to battle against the computer's card.
+3. The higher stat wins the round!
+4. Track your score as you progress through the game.
+5. You can choose to play again or reset the game at any time.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Game Logic
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Each player has a deck of superhero cards.
+- Players selects a stat from their superhero card to battle against the computer's card.
+- The player with the higher stat wins the round, earning points. In case of a tie, the round is considered a draw.
+- The game continues until all cards are played, at which point the scores are compared.
 
-## Learn More
+## Components
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Navigation: Handles routing between different pages (Home, Collection).
+- GetStarted: A form for entering the player's name.
+- PlayGame: The main game logic and display of player and computer cards.
+- GameOver: Displays the final scores and options to play again or reset.
+- CharacterCard: Displays individual superhero cards with stats.
+- StatsTable: Shows a table of power stats for the selected character.
+- BottomAlert: Displays alerts for loading states and errors.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Contributing
 
-### Code Splitting
+We welcome contributions to SuperWars! If you have suggestions for improvements or features, please fork the repository and submit a pull request.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## License
 
-### Analyzing the Bundle Size
+This project is licensed under the MIT License.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Acknowledgments
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Special thanks to the creators of React, Redux, and Bootstrap for their amazing libraries.
+- Background image by vector_corp on Freepik.
