@@ -1,13 +1,17 @@
-import { Button, Card, CardFooter, Form } from "react-bootstrap";
+import { Button, Card, CardFooter, Dropdown, Form } from "react-bootstrap";
 import "./GetStarted.css";
 import { useRef, useState } from "react";
-import { useDispatch } from "react-redux";
-import { setPlayerName } from "../store/playerDataSlice";
+import { useDispatch, useSelector } from "react-redux";
+import { deckSize, setPlayerName } from "../store/playerDataSlice";
 
 const GetStarted = ({ onPlayerReady }) => {
   const playerRef = useRef(null);
   const dispatch = useDispatch();
   const [inputError, setInputError] = useState("");
+  const selector = useSelector((state) => state.playerSlice);
+  const handleDeckSize = (eventKey) => {
+    dispatch(deckSize(eventKey));
+  };
   const handleSubmit = (e) => {
     e.preventDefault();
     if (playerRef.current.value !== "") {
@@ -35,6 +39,21 @@ const GetStarted = ({ onPlayerReady }) => {
               ref={playerRef}
             ></Form.Control>
           </Form.Group>
+          <br />
+          <Dropdown onSelect={handleDeckSize}>
+            Select your deck Size
+            <br />
+            <br />
+            <Dropdown.Toggle variant="primary" id="dropdown-basic">
+              {selector.deckSize}
+            </Dropdown.Toggle>
+            <Dropdown.Menu>
+              <Dropdown.Item eventKey={5}>5</Dropdown.Item>
+              <Dropdown.Item eventKey={10}>10</Dropdown.Item>
+              <Dropdown.Item eventKey={15}>15</Dropdown.Item>
+              <Dropdown.Item eventKey={20}>20</Dropdown.Item>
+            </Dropdown.Menu>
+          </Dropdown>
           <Button
             variant="primary"
             type="submit"

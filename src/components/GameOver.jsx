@@ -17,7 +17,9 @@ const GameOver = ({ onReset, onPlayAgain }) => {
           {selector.name}'s' Score
         </p>
 
-        <p style={{ fontSize: "40px", color: "black" }}>{selector.score}</p>
+        <p style={{ fontSize: "40px", color: "black" }}>
+          {(selector.score / selector.deckSize) * 100}%
+        </p>
       </Card.Body>
       <CardFooter className="custom-card-footer">
         <div className="button-container">

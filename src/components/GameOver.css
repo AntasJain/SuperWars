@@ -6,7 +6,7 @@
   min-width: 400px;
 }
 .custom-card-footer {
-  background-color: #f8f9fa !important;
+  background-color: #f8f9fa;
 }
 .button-container {
   display: flex;

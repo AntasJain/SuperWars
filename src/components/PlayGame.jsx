@@ -30,13 +30,13 @@ const PlayGame = ({ characters, onGameOver }) => {
     "COMBAT",
   ];
   const playerName = useSelector((state) => state.playerSlice).name;
+  const deckSize = useSelector((state) => state.playerSlice).deckSize || 5;
   const [score, setScore] = useState({ computer: 0, player: 0, draw: 0 });
-
   useEffect(() => {
-    const { deckPlayer, deckComputer } = shuffleCards(characters);
+    const { deckPlayer, deckComputer } = shuffleCards(characters, deckSize * 2);
     setDeckPlayer(deckPlayer);
     setDeckComputer(deckComputer);
-  }, [characters]);
+  }, [characters, deckSize]);
 
   const handleButtonClick = (stat) => {
     if (card < deckPlayer.length && card < deckComputer.length) {
@@ -70,9 +70,10 @@ const PlayGame = ({ characters, onGameOver }) => {
         setCard(card + 1);
         setCompCardClickable(false);
         setComputerCardFlipped(false);
-        if (card === deckComputer.length) {
+        if (card === deckSize - 1) {
           dispatch(updateScore(score.player));
           onGameOver();
+          return;
         }
       }, 1000);
     }
@@ -161,7 +162,12 @@ const PlayGame = ({ characters, onGameOver }) => {
         </div>
       </Card.Body>
       <CardFooter>
-        <ProgressBar striped variant="success" now={card * 10} key={1} />
+        <ProgressBar
+          striped
+          variant="primary"
+          now={(card / deckPlayer.length) * 100}
+          key={1}
+        />
       </CardFooter>
     </Card>
   );
