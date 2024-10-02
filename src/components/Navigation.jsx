@@ -18,6 +18,9 @@ function Navigation({ onHomeReset }) {
           <Nav.Link as={Link} to="/collection">
             Collection
           </Nav.Link>
+          <Nav.Link as={Link} to="/rules">
+            Rules
+          </Nav.Link>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

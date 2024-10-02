@@ -1,6 +1,9 @@
 # SuperWars
 
+Visit : https://playsuperwars.netlify.app
 Welcome to SuperWars! This is an interactive card game where players can pit their favorite superheroes against computer based on their power stats. Built using React and Redux, SuperWars allows player to enter their names, shuffle superhero cards, and engage in a fun, competitive game.
+
+Warning: The Site is not currently responsive to different screen size, so please make sure to use it on a full screen pc, preferably on chrome.
 
 ## Table of Contents
 

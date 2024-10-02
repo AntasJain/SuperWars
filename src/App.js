@@ -9,6 +9,7 @@ import { Container } from "react-bootstrap";
 import Collection from "./pages/Collection";
 import Navigation from "./components/Navigation";
 import BottomAlert from "./components/BottomAlert";
+import Rules from "./pages/Rules";
 
 function App() {
   const dispatch = useDispatch();
@@ -44,6 +45,14 @@ function App() {
             }
           />
           <Route path="/collection" element={<Collection />} />
+          <Route
+            path="/rules"
+            element={
+              <Container className="mt-3">
+                <Rules />
+              </Container>
+            }
+          />
         </Routes>
 
         <BottomAlert loading={loading} error={error} />

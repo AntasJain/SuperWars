@@ -14,7 +14,7 @@ const GameOver = ({ onReset, onPlayAgain }) => {
       <Card.Body>
         <Card.Title>Game Over</Card.Title>
         <p style={{ color: "black", fontSize: "24px" }}>
-          {selector.name}'s' Score
+          {selector.name}'s Score
         </p>
 
         <p style={{ fontSize: "40px", color: "black" }}>
