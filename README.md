@@ -1,6 +1,6 @@
 # SuperWars
 
-Welcome to SuperWars! This is an interactive card game where players can pit their favorite superheroes against each other based on their power stats. Built using React and Redux, SuperWars allows players to enter their names, shuffle superhero cards, and engage in a fun, competitive game.
+Welcome to SuperWars! This is an interactive card game where players can pit their favorite superheroes against computer based on their power stats. Built using React and Redux, SuperWars allows player to enter their names, shuffle superhero cards, and engage in a fun, competitive game.
 
 ## Table of Contents
 
