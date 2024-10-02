@@ -70,11 +70,11 @@ const PlayGame = ({ characters, onGameOver }) => {
         setCard(card + 1);
         setCompCardClickable(false);
         setComputerCardFlipped(false);
-        if (card === 9) {
+        if (card === deckComputer.length) {
           dispatch(updateScore(score.player));
           onGameOver();
         }
-      }, 500);
+      }, 1000);
     }
   };
 

@@ -1,4 +1,4 @@
-import { Button, Card } from "react-bootstrap";
+import { Button, Card, CardFooter } from "react-bootstrap";
 import { useSelector } from "react-redux";
 import "./GameOver.css";
 const GameOver = ({ onReset, onPlayAgain }) => {
@@ -13,9 +13,13 @@ const GameOver = ({ onReset, onPlayAgain }) => {
     <Card className="custom-card">
       <Card.Body>
         <Card.Title>Game Over</Card.Title>
-        <p style={{ color: "black" }}>{selector.name}'s' Score</p>
+        <p style={{ color: "black", fontSize: "24px" }}>
+          {selector.name}'s' Score
+        </p>
 
         <p style={{ fontSize: "40px", color: "black" }}>{selector.score}</p>
+      </Card.Body>
+      <CardFooter className="custom-card-footer">
         <div className="button-container">
           <Button className="button" onClick={handlePlayAgain}>
             Play Again
@@ -24,7 +28,7 @@ const GameOver = ({ onReset, onPlayAgain }) => {
             Reset Game
           </Button>
         </div>
-      </Card.Body>
+      </CardFooter>
     </Card>
   );
 };
